@@ -9,7 +9,7 @@ jobs:
         uses: snyk/actions/node@master
         continue-on-error: true # To make sure that SARIF upload gets called
         env:
-          SNYK_TOKEN: ${{ secrets.SNYK_TOKEN }}
+          SNYK_TOKEN: ${{ secrets.TOKEN }
         with:
           command: test
           args: --sarif-file-output=snyk.sarif --all-projects
